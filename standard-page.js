@@ -34,6 +34,7 @@ H5P.StandardPage = (function ($) {
   StandardPage.prototype.attach = function ($container) {
     var self = this;
     this.$inner = $container.addClass(MAIN_CONTAINER);
+    this.pageInstances = [];
 
     this.params.elementList.forEach(function (element) {
       var $elementContainer = $('<div>', {
@@ -41,7 +42,23 @@ H5P.StandardPage = (function ($) {
 
       var elementInstance = H5P.newRunnable(element, self.id);
       elementInstance.attach($elementContainer);
+
+      self.pageInstances.push(elementInstance);
     });
+  };
+
+  /**
+   * Retrieves input array.
+   */
+  StandardPage.prototype.getInputArray = function () {
+    var inputArray = [];
+    this.pageInstances.forEach(function (elementInstance) {
+      if (elementInstance instanceof H5P.TextInputField) {
+        inputArray.push(elementInstance.getInput());
+      }
+    });
+
+    return inputArray;
   };
 
   return StandardPage;
