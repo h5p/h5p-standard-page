@@ -61,5 +61,13 @@ H5P.StandardPage = (function ($) {
     return inputArray;
   };
 
+  /**
+   * Get page title
+   * @returns {String} page title
+   */
+  StandardPage.prototype.getTitle = function () {
+    return this.params.taskDescription;
+  };
+
   return StandardPage;
 })(H5P.jQuery);
