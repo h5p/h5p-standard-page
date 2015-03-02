@@ -27,6 +27,11 @@
   ],
   "preloadedDependencies": [
     {
+      "machineName": "MustacheJS",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
       "machineName": "H5P.DescriptionField",
       "majorVersion": 1,
       "minorVersion": 0

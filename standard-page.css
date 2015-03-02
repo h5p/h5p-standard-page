@@ -1,0 +1,16 @@
+.h5p-standard-page {
+  padding: 0.5em 1em;
+}
+
+.h5p-standard-page .standard-page-title {
+  height: 10%;
+  padding: 0.25em 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.h5p-standard-page .standard-page-help-text {
+  float: right;
+  color: #85B1E3;
+  cursor: pointer;
+  font-size: 0.8em;
+}

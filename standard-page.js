@@ -20,8 +20,9 @@ H5P.StandardPage = (function ($) {
 
     // Set default behavior.
     this.params = $.extend({}, {
-      taskDescription: 'Title',
+      title: 'Title',
       elementList: [],
+      helpTextLabel: 'Read more',
       helpText: 'Help text'
     }, params);
   }
@@ -33,7 +34,22 @@ H5P.StandardPage = (function ($) {
    */
   StandardPage.prototype.attach = function ($container) {
     var self = this;
-    this.$inner = $container.addClass(MAIN_CONTAINER);
+
+    this.$inner = $('<div>', {
+      'class': MAIN_CONTAINER
+    }).appendTo($container);
+
+    var standardPageTemplate =
+      '<div class="standard-page-header">' +
+      ' <div role="button" tabindex="1" class="standard-page-help-text">{{helpTextLabel}}</div>' +
+      ' <div class="standard-page-title">{{title}}</div>' +
+      '</div>';
+
+    /*global Mustache */
+    self.$inner.append(Mustache.render(standardPageTemplate, self.params));
+
+    self.createHelpTextButton();
+
     this.pageInstances = [];
 
     this.params.elementList.forEach(function (element) {
@@ -45,6 +61,22 @@ H5P.StandardPage = (function ($) {
 
       self.pageInstances.push(elementInstance);
     });
+  };
+
+  /**
+   * Create help text functionality for reading more about the task
+   */
+  StandardPage.prototype.createHelpTextButton = function () {
+    var self = this;
+
+    if (this.params.helpText !== undefined && this.params.helpText.length) {
+      $('.standard-page-help-text', this.$inner).click(function () {
+        var $helpTextDialog = new H5P.JoubelUI.createHelpTextDialog(self.params.title, self.params.helpText);
+        $helpTextDialog.appendTo(self.$inner.parent().parent().parent());
+      });
+    } else {
+      $('.standard-page-help-text', this.$inner).remove();
+    }
   };
 
   /**
@@ -66,7 +98,7 @@ H5P.StandardPage = (function ($) {
    * @returns {String} page title
    */
   StandardPage.prototype.getTitle = function () {
-    return this.params.taskDescription;
+    return this.params.title;
   };
 
   return StandardPage;

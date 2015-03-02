@@ -1,23 +1,10 @@
 [
   {
-    "name": "taskDescription",
+    "name": "title",
     "label": "Title",
     "type": "text",
-    "widget": "html",
-    "description": "Title for the documentation tool.",
-    "enterMode": "p",
-    "tags": [
-      "strong",
-      "em",
-      "u",
-      "a",
-      "ul",
-      "ol",
-      "h2",
-      "h3",
-      "hr"
-    ],
-    "optional": true
+    "default": "Standard Page",
+    "description": "Title for the page."
   },
   {
     "name": "elementList",
@@ -34,6 +21,13 @@
       "H5P.TextInputField 1.0"
       ]
     }
+  },
+  {
+    "name": "helpTextLabel",
+    "label": "Label for help text",
+    "type": "text",
+    "description": "Label for showing additional helpful information to the user.",
+    "default": "Read more"
   },
   {
     "name": "helpText",
