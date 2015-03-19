@@ -18,13 +18,6 @@
       "path": "standard-page.js"
     }
   ],
-  "editorDependencies": [
-    {
-      "machineName": "H5PEditor.VerticalTabs",
-      "majorVersion": 1,
-      "minorVersion": 0
-    }
-  ],
   "preloadedDependencies": [
     {
       "machineName": "MustacheJS",
