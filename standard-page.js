@@ -72,8 +72,7 @@ H5P.StandardPage = (function ($) {
     if (this.params.helpText !== undefined && this.params.helpText.length) {
 
       // Create help button
-      $('.standard-page-help-text', this.$inner)
-        .click(function () {
+      $('.standard-page-help-text', this.$inner).click(function () {
         var $helpTextDialog = new H5P.JoubelUI.createHelpTextDialog(self.params.title, self.params.helpText);
         $helpTextDialog.appendTo(self.$inner.parent().parent().parent());
       }).keydown(function (e) {
@@ -83,7 +82,6 @@ H5P.StandardPage = (function ($) {
             $(this).click();
             e.preventDefault();
           }
-          $(this).focus();
         });
 
     } else {
