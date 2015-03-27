@@ -70,10 +70,22 @@ H5P.StandardPage = (function ($) {
     var self = this;
 
     if (this.params.helpText !== undefined && this.params.helpText.length) {
-      $('.standard-page-help-text', this.$inner).click(function () {
+
+      // Create help button
+      $('.standard-page-help-text', this.$inner)
+        .click(function () {
         var $helpTextDialog = new H5P.JoubelUI.createHelpTextDialog(self.params.title, self.params.helpText);
         $helpTextDialog.appendTo(self.$inner.parent().parent().parent());
-      });
+      }).keydown(function (e) {
+          var keyPressed = e.which;
+          // 32 - space
+          if (keyPressed === 32) {
+            $(this).click();
+            e.preventDefault();
+          }
+          $(this).focus();
+        });
+
     } else {
       $('.standard-page-help-text', this.$inner).remove();
     }
