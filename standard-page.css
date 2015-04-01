@@ -3,7 +3,7 @@
 }
 
 .h5p-standard-page .standard-page-title {
-  padding: 0.5em 0 0;
+  padding: 0.5em 0;
   margin-bottom: 0.5em;
   font-size: 18px;
   border-bottom: 1px solid #ccc;
@@ -15,5 +15,9 @@
   color: #20588F;
   cursor: pointer;
   font-size: 0.8em;
-  line-height: 3.5em;
+  line-height: 3.6em;
+}
+
+.h5p-standard-page .standard-page-help-text:hover {
+  color: #1a4773;
 }
