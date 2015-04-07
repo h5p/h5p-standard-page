@@ -107,6 +107,23 @@ H5P.StandardPage = (function ($) {
   };
 
   /**
+   * Returns True if all required inputs are filled.
+   * @returns {boolean} True if all required inputs are filled.
+   */
+  StandardPage.prototype.requiredInputsIsFilled = function () {
+    var requiredInputsIsFilled = true;
+    this.pageInstances.forEach(function (elementInstance) {
+      if (elementInstance instanceof H5P.TextInputField) {
+        if (!elementInstance.isRequiredInputFilled()) {
+          requiredInputsIsFilled = false;
+        }
+      }
+    });
+
+    return requiredInputsIsFilled;
+  };
+
+  /**
    * Get page title
    * @returns {String} page title
    */
