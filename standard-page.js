@@ -43,7 +43,7 @@ H5P.StandardPage = (function ($) {
 
     var standardPageTemplate =
       '<div class="standard-page-header">' +
-      ' <div role="button" tabindex="1" class="standard-page-help-text">{{{helpTextLabel}}}</div>' +
+      ' <div role="button" tabindex="0" class="standard-page-help-text">{{{helpTextLabel}}}</div>' +
       ' <div class="standard-page-title">{{{title}}}</div>' +
       '</div>';
 
