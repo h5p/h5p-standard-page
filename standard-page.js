@@ -5,6 +5,8 @@ var H5P = H5P || {};
  * @external {jQuery} $ H5P.jQuery
  */
 H5P.StandardPage = (function ($) {
+  "use strict";
+
   // CSS Classes:
   var MAIN_CONTAINER = 'h5p-standard-page';
 
@@ -41,8 +43,8 @@ H5P.StandardPage = (function ($) {
 
     var standardPageTemplate =
       '<div class="standard-page-header">' +
-      ' <div role="button" tabindex="1" class="standard-page-help-text">{{helpTextLabel}}</div>' +
-      ' <div class="standard-page-title">{{title}}</div>' +
+      ' <div role="button" tabindex="1" class="standard-page-help-text">{{{helpTextLabel}}}</div>' +
+      ' <div class="standard-page-title">{{{title}}}</div>' +
       '</div>';
 
     /*global Mustache */
@@ -54,6 +56,7 @@ H5P.StandardPage = (function ($) {
 
     this.params.elementList.forEach(function (element) {
       var $elementContainer = $('<div>', {
+        'class': 'h5p-standard-page-element'
       }).appendTo(self.$inner);
 
       var elementInstance = H5P.newRunnable(element, self.id);
@@ -76,13 +79,13 @@ H5P.StandardPage = (function ($) {
         var $helpTextDialog = new H5P.JoubelUI.createHelpTextDialog(self.params.title, self.params.helpText);
         $helpTextDialog.appendTo(self.$inner.parent().parent().parent());
       }).keydown(function (e) {
-          var keyPressed = e.which;
-          // 32 - space
-          if (keyPressed === 32) {
-            $(this).click();
-            e.preventDefault();
-          }
-        });
+        var keyPressed = e.which;
+        // 32 - space
+        if (keyPressed === 32) {
+          $(this).click();
+          e.preventDefault();
+        }
+      });
 
     } else {
       $('.standard-page-help-text', this.$inner).remove();
@@ -112,4 +115,4 @@ H5P.StandardPage = (function ($) {
   };
 
   return StandardPage;
-})(H5P.jQuery);
+}(H5P.jQuery));

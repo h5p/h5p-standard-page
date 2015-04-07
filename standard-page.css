@@ -21,3 +21,7 @@
 .h5p-standard-page .standard-page-help-text:hover {
   color: #1a4773;
 }
+
+.h5p-standard-page .h5p-standard-page-element {
+  padding: 0.25em 0;
+}

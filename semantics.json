@@ -17,8 +17,9 @@
       "label": "Content type",
       "description": "Library for this page.",
       "options": [
-      "H5P.DescriptionField 1.0",
-      "H5P.TextInputField 1.0"
+        "H5P.Text 1.0",
+        "H5P.TextInputField 1.0",
+        "H5P.Image 1.0"
       ]
     }
   },
@@ -27,7 +28,7 @@
     "label": "Label for help text",
     "type": "text",
     "description": "Label for showing additional helpful information to the user.",
-    "default": "Read more"
+    "default": "More information"
   },
   {
     "name": "helpText",
