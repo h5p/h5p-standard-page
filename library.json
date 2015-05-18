@@ -25,7 +25,12 @@
       "minorVersion": 0
     },
     {
-      "machineName": "H5P.DescriptionField",
+      "machineName": "H5P.Image",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.Text",
       "majorVersion": 1,
       "minorVersion": 0
     },
