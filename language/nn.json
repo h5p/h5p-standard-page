@@ -2,14 +2,14 @@
   "semantics": [
     {
       "label": "Tittel",
-      "description": "Tittel for siden.",
+      "description": "Tittel for sida.",
       "default": "Standard side"
     },
     {
       "label": "Elementer",
       "entity": "Element",
       "field": {
-        "label": "Innholdstype",
+        "label": "Innhaldstype",
         "description": "Bibliotek for dette elementet."
       }
     },
