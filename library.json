@@ -2,8 +2,8 @@
   "title": "Standard page",
   "description": "Standard list page where you can add multiple library element .",
   "majorVersion": 1,
-  "minorVersion": 0,
-  "patchVersion": 1,
+  "minorVersion": 1,
+  "patchVersion": 0,
   "runnable": 0,
   "author": "Joubel AS",
   "license": "MIT",
@@ -32,7 +32,7 @@
     {
       "machineName": "H5P.Text",
       "majorVersion": 1,
-      "minorVersion": 0
+      "minorVersion": 1
     },
     {
       "machineName": "H5P.TextInputField",
@@ -42,7 +42,7 @@
     {
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
-      "minorVersion": 1
+      "minorVersion": 2
     }
   ]
 }
