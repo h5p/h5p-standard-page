@@ -98,7 +98,7 @@ H5P.StandardPage = (function ($) {
   StandardPage.prototype.getInputArray = function () {
     var inputArray = [];
     this.pageInstances.forEach(function (elementInstance) {
-      if (elementInstance instanceof H5P.TextInputField) {
+      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
         inputArray.push(elementInstance.getInput());
       }
     });
@@ -113,7 +113,7 @@ H5P.StandardPage = (function ($) {
   StandardPage.prototype.requiredInputsIsFilled = function () {
     var requiredInputsIsFilled = true;
     this.pageInstances.forEach(function (elementInstance) {
-      if (elementInstance instanceof H5P.TextInputField) {
+      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
         if (!elementInstance.isRequiredInputFilled()) {
           requiredInputsIsFilled = false;
         }
