@@ -15,12 +15,12 @@
     },
     {
       "label": "Tekst for \"Hjelpetekst\"-knapp",
-      "description": "Tekst som vil vises på \"HjelpeTekst\"-knapp som vil vises tilleggs-infomasjon til brukeren.",
-      "default": "Mer informasjon"
+      "description": "Tekst som vil visast på \"HjelpeTekst\"-knapp som vil visa tilleggsinformasjon til brukaren.",
+      "default": "Meir informasjon"
     },
     {
-      "label": "Fyll inn tilleggs-informasjon om utførelse til brukeren",
-      "description": "Her kan du fylle inn ekstra nyttig informasjon om hvordan brukeren skal bruke denne siden."
+      "label": "Fyll inn tilleggsinformasjon om utføring til brukaren",
+      "description": "Her kan du fylle inn ekstra nyttig informasjon om korleis brukaren skal nytte denne sida."
     }
   ]
 }

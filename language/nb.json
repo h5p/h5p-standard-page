@@ -19,7 +19,7 @@
       "default": "Mer informasjon"
     },
     {
-      "label": "Fyll inn tilleggs-informasjon om utførelse til brukeren",
+      "label": "Fyll inn tilleggsinformasjon om utførelse til brukeren",
       "description": "Her kan du fylle inn ekstra nyttig informasjon om hvordan brukeren skal bruke denne siden."
     }
   ]
