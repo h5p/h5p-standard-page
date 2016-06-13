@@ -1,0 +1,38 @@
+{
+  "semantics": [
+    {
+
+      "default": "Standardseite",
+      "description": "Titel der Seite"
+    },
+    {
+
+
+      "field": {
+
+        "label": "Inhaltstyp",
+        "description": "Bibliothek für diese Seite.",
+        "options": [
+
+        ]
+      }
+    },
+    {
+
+      "label": "Label des Hilfetextes",
+
+      "description": "Label, um dem Benutzer zusätzliche hilfreiche Informationen zu zeigen.",
+      "default": "Weitere Informationen"
+    },
+    {
+
+      "label": "Einfügen der zusätzlichen Hilfsinformationen",
+
+      "description": "Hier können zusätzliche Informationen für den Benutzer eingefügt werden, die dann verfügbar sind, wenn sie angeklickt werden.",
+
+      "tags": [
+
+      ],
+
+    }
+  ]
