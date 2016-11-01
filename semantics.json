@@ -14,7 +14,7 @@
     "field": {
       "name": "element",
       "type": "library",
-      "label": "Content type",
+      "label": "Element type",
       "description": "Library for this page.",
       "options": [
         "H5P.Text 1.1",
