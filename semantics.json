@@ -15,6 +15,7 @@
       "name": "element",
       "type": "library",
       "label": "Element type",
+	  "importance": "high",
       "description": "Library for this page.",
       "options": [
         "H5P.Text 1.1",
