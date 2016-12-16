@@ -2,7 +2,7 @@
   {
     "name": "title",
     "label": "Title",
-    "importance":"high",
+    "importance": "high",
     "type": "text",
     "default": "Standard Page",
     "description": "Title for the page."
@@ -10,7 +10,7 @@
   {
     "name": "elementList",
     "label": "Elements",
-    "importance":"high",
+    "importance": "high",
     "type": "list",
     "entity": "element",
     "field": {
@@ -53,7 +53,6 @@
       "h2",
       "h3",
       "hr"
-    ],
-    "optional": true
+    ]
   }
 ]
