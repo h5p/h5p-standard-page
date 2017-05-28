@@ -101,6 +101,34 @@ H5P.StandardPage = (function ($) {
       if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
         inputArray.push(elementInstance.getInput());
       }
+
+      if (elementInstance.libraryInfo.machineName === 'H5P.MultiChoice') {
+        var multiChoiceAnswers = elementInstance.getAnswers();
+        var arrAnswers = [], strAnswers, div, text;
+        
+        // strip html tags in answers
+        for(var i=0; i < multiChoiceAnswers.answers.length; i++) {
+          div = document.createElement("div");
+          div.innerHTML = multiChoiceAnswers.answers[i].text;
+          text = div.textContent || div.innerText || "";
+          arrAnswers.push(text.trim());
+        }
+
+        // concatenate answers
+        if (arrAnswers.length > 1) {
+          strAnswers = arrAnswers.join(', ');
+        } else if (arrAnswers.length === 1) {
+          strAnswers = arrAnswers[0];
+        } else {
+          strAnswers = '';
+        }
+
+        inputArray.push({
+          elementId: multiChoiceAnswers.elementId,
+          value: strAnswers
+        });
+      }
+
     });
 
     return inputArray;
