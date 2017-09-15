@@ -4,7 +4,7 @@ var H5P = H5P || {};
  * Standard Page module
  * @external {jQuery} $ H5P.jQuery
  */
-H5P.StandardPage = (function ($) {
+H5P.StandardPage = (function ($, EventDispatcher) {
   "use strict";
 
   // CSS Classes:
@@ -17,6 +17,8 @@ H5P.StandardPage = (function ($) {
    * @returns {Object} StandardPage StandardPage instance
    */
   function StandardPage(params, id) {
+    EventDispatcher.call(this);
+
     this.$ = $(this);
     this.id = id;
 
@@ -28,6 +30,10 @@ H5P.StandardPage = (function ($) {
       helpText: 'Help text'
     }, params);
   }
+
+  // Setting up inheritance
+  StandardPage.prototype = Object.create(EventDispatcher.prototype);
+  StandardPage.prototype.constructor = StandardPage;
 
   /**
    * Attach function called by H5P framework to insert H5P content into page.
@@ -60,6 +66,11 @@ H5P.StandardPage = (function ($) {
       }).appendTo(self.$inner);
 
       var elementInstance = H5P.newRunnable(element, self.id);
+
+      elementInstance.on('loaded', function () {
+        self.trigger('resize');
+      });
+
       elementInstance.attach($elementContainer);
 
       self.pageInstances.push(elementInstance);
@@ -132,4 +143,4 @@ H5P.StandardPage = (function ($) {
   };
 
   return StandardPage;
-}(H5P.jQuery));
+}(H5P.jQuery, H5P.EventDispatcher));
