@@ -50,13 +50,13 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     var standardPageTemplate =
       '<div class="standard-page-header">' +
       ' <div role="button" tabindex="0" class="standard-page-help-text">{{{helpTextLabel}}}</div>' +
-      ' <div class="standard-page-title" tabindex="-1">{{{title}}}</div>' +
+      ' <div class="standard-page-title" role="heading" tabindex="-1">{{{title}}}</div>' +
       '</div>';
 
     /*global Mustache */
     self.$inner.append(Mustache.render(standardPageTemplate, self.params));
 
-    self.$header = self.$inner.find('.standard-page-title');
+    self.$pageTitle = self.$inner.find('.standard-page-title');
 
     self.createHelpTextButton();
 
@@ -140,7 +140,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * Sets focus on page
    */
   StandardPage.prototype.focus = function () {
-    this.$header.focus();
+    this.$pageTitle.focus();
   };
 
   /**
