@@ -1,26 +1,26 @@
 {
   "semantics":[
     {
-      "label":"Title",
-      "default":"Standard Page",
-      "description":"Title for the page."
+      "label":"Titel",
+      "default":"Standard Side",
+      "description":"Denne sides titel."
     },
     {
-      "label":"Elements",
+      "label":"Elementer",
       "entity":"element",
       "field":{
-        "label":"Element type",
-        "description":"Library for this page."
+        "label":"Elementtype",
+        "description":"Bibliotek for denne side."
       }
     },
     {
-      "label":"Label for help text",
-      "description":"Label for showing additional helpful information to the user.",
-      "default":"More information"
+      "label":"Etikette til hjælpetekst",
+      "description":"Etiketten kan vise yderligere støttende information til brugeren.",
+      "default":"Mere information"
     },
     {
-      "label":"Fill in additional help information",
-      "description":"Here you can fill in additional information for the user, which will be available when clicked."
+      "label":"Tilføj yderligere støttende information",
+      "description":"Her kan du tilføje yderligere information til brugeren, som vil blive vist når der klikkes."
     }
   ]
 }
