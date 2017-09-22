@@ -49,14 +49,15 @@ H5P.StandardPage = (function ($, EventDispatcher) {
 
     var standardPageTemplate =
       '<div class="standard-page-header">' +
-      ' <div role="button" tabindex="0" class="standard-page-help-text">{{{helpTextLabel}}}</div>' +
       ' <div class="standard-page-title" role="heading" tabindex="-1">{{{title}}}</div>' +
+      ' <button class="standard-page-help-text">{{{helpTextLabel}}}</button>' +
       '</div>';
 
     /*global Mustache */
     self.$inner.append(Mustache.render(standardPageTemplate, self.params));
 
     self.$pageTitle = self.$inner.find('.standard-page-title');
+    self.$helpButton = self.$inner.find('.standard-page-help-text');
 
     self.createHelpTextButton();
 
@@ -86,22 +87,15 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     var self = this;
 
     if (this.params.helpText !== undefined && this.params.helpText.length) {
-
-      // Create help button
-      $('.standard-page-help-text', this.$inner).click(function () {
-        var $helpTextDialog = new H5P.JoubelUI.createHelpTextDialog(self.params.title, self.params.helpText);
-        $helpTextDialog.appendTo(self.$inner.parent().parent().parent());
-      }).keydown(function (e) {
-        var keyPressed = e.which;
-        // 32 - space
-        if (keyPressed === 32) {
-          $(this).click();
-          e.preventDefault();
-        }
+      self.$helpButton.on('click', function () {
+        self.trigger('open-help-dialog', {
+          title: self.params.title,
+          helpText: self.params.helpText
+        });
       });
-
-    } else {
-      $('.standard-page-help-text', this.$inner).remove();
+    }
+    else {
+      self.$helpButton.remove();
     }
   };
 

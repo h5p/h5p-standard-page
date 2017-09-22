@@ -2,6 +2,10 @@
   padding: 0.5em 1em;
 }
 
+.h5p-standard-page .standard-page-header {
+  position: relative;
+}
+
 .h5p-standard-page .standard-page-title {
   padding: 0.5em 0;
   margin-bottom: 0.5em;
@@ -11,7 +15,10 @@
 }
 
 .h5p-standard-page .standard-page-help-text {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+
   color: #1a73d9;
   cursor: pointer;
   font-size: 0.8em;
