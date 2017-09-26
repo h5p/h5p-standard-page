@@ -48,16 +48,16 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     }).appendTo($container);
 
     var standardPageTemplate =
-      '<div class="standard-page-header">' +
-      ' <div class="standard-page-title" role="heading" tabindex="-1">{{{title}}}</div>' +
-      ' <button class="standard-page-help-text">{{{helpTextLabel}}}</button>' +
+      '<div class="page-header">' +
+      ' <div class="page-title" role="heading" tabindex="-1">{{{title}}}</div>' +
+      ' <button class="page-help-text">{{{helpTextLabel}}}</button>' +
       '</div>';
 
     /*global Mustache */
     self.$inner.append(Mustache.render(standardPageTemplate, self.params));
 
-    self.$pageTitle = self.$inner.find('.standard-page-title');
-    self.$helpButton = self.$inner.find('.standard-page-help-text');
+    self.$pageTitle = self.$inner.find('.page-title');
+    self.$helpButton = self.$inner.find('.page-help-text');
 
     self.createHelpTextButton();
 
