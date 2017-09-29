@@ -1,26 +1,26 @@
 {
   "semantics":[
     {
-      "label":"Title",
-      "default":"Standard Page",
-      "description":"Title for the page."
+      "label":"Otsikko",
+      "default":"Perussivu",
+      "description":"Sivun otsikko."
     },
     {
-      "label":"Elements",
-      "entity":"element",
+      "label":"Rakenne",
+      "entity":"osa",
       "field":{
-        "label":"Element type",
-        "description":"Library for this page."
+        "label":"Osa",
+        "description":"Saatavilla olevat rakenneosat."
       }
     },
     {
-      "label":"Label for help text",
-      "description":"Label for showing additional helpful information to the user.",
-      "default":"More information"
+      "label":"Teksti osoittamaan lisätietoa",
+      "description":"Lisätietoa ilmaiseva teksti käyttäjälle.",
+      "default":"Lisää tietoa"
     },
     {
-      "label":"Fill in additional help information",
-      "description":"Here you can fill in additional information for the user, which will be available when clicked."
+      "label":"Lisätietoteksti",
+      "description":"Tähän voit täyttää tekstiä lisätietona käyttäjälle. Käyttäjä saa tekstin näkyviin klikkaamalla."
     }
   ]
 }
