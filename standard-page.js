@@ -185,7 +185,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     definition.description = {
       'en-US': self.params.title
     };
-    definition.extensions: {
+    definition.extensions = {
       'https://h5p.org/x-api/h5p-machine-name': 'H5P.DocumentationTool'
     }
 
