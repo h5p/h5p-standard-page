@@ -178,12 +178,16 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    */
   StandardPage.prototype.getxAPIDefinition = function () {
     var definition = {};
+    var self = this;
 
     definition.interactionType = 'compound';
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.description = {
-      'en-US': ''
+      'en-US': self.params.title
     };
+    definition.extensions: {
+      'https://h5p.org/x-api/h5p-machine-name': 'H5P.DocumentationTool'
+    }
 
     return definition;
   };
