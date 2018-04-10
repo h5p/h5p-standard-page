@@ -16,11 +16,12 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * @param {Number} id Content identification
    * @returns {Object} StandardPage StandardPage instance
    */
-  function StandardPage(params, id) {
+  function StandardPage(params, id, extras) {
     EventDispatcher.call(this);
 
     this.$ = $(this);
     this.id = id;
+    this.extras = extras;
 
     // Set default behavior.
     this.params = $.extend({}, {
@@ -142,7 +143,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * @returns {String} page title
    */
   StandardPage.prototype.getTitle = function () {
-    return this.params.title;
+    return H5P.createTitle((this.extras && this.extras.metadata && this.extras.metadata.title) ? this.extras.metadata.title : 'Standard Page');
   };
 
   /**
