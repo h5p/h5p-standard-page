@@ -1,26 +1,26 @@
 {
   "semantics":[
     {
-      "label":"Title",
-      "default":"Standard Page",
-      "description":"Title for the page."
+      "label":"Titel",
+      "default":"Standaard pagina",
+      "description":"Titel van de pagina."
     },
     {
-      "label":"Elements",
-      "entity":"element",
+      "label":"Onderdelen",
+      "entity":"onderdeel",
       "field":{
-        "label":"Element type",
-        "description":"Library for this page."
+        "label":"Soort onderdeel",
+        "description":"Bibliotheek voor deze pagina."
       }
     },
     {
-      "label":"Label for help text",
-      "description":"Label for showing additional helpful information to the user.",
-      "default":"More information"
+      "label":"Label voor de help tekst",
+      "description":"Label om de aanvullende nuttige informatie aan de gebruiker te tonen.",
+      "default":"Meer informatie"
     },
     {
-      "label":"Fill in additional help information",
-      "description":"Here you can fill in additional information for the user, which will be available when clicked."
+      "label":"Vul hier de aanvullende help informatie in",
+      "description":"Hier kun je de aanvullende informatie invullen voor de gebruiker, die beschikbaar komt als je erop klikt."
     }
   ]
 }

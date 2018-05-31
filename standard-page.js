@@ -145,5 +145,75 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     return this.params.title;
   };
 
+  /**
+   * Triggers an 'answered' xAPI event for all inputs
+   */
+  StandardPage.prototype.triggerAnsweredEvents = function () {
+    this.pageInstances.forEach(function (elementInstance) {
+      if (elementInstance.triggerAnsweredEvent) {
+        elementInstance.triggerAnsweredEvent();
+      }
+    });
+  };
+
+  /**
+   * Helper function to return all xAPI data
+   * @returns {Array}
+   */
+  StandardPage.prototype.getXAPIDataFromChildren = function () {
+    var children = [];
+
+    this.pageInstances.forEach(function (elementInstance) {
+      if (elementInstance.getXAPIData) {
+        children.push(elementInstance.getXAPIData());
+      }
+    });
+
+    return children;
+  };
+
+  /**
+   * Generate xAPI object definition used in xAPI statements.
+   * @return {Object}
+   */
+  StandardPage.prototype.getxAPIDefinition = function () {
+    var definition = {};
+    var self = this;
+
+    definition.interactionType = 'compound';
+    definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
+    definition.description = {
+      'en-US': self.params.title
+    };
+    definition.extensions = {
+      'https://h5p.org/x-api/h5p-machine-name': 'H5P.StandardPage'
+    }
+
+    return definition;
+  };
+
+  /**
+   * Add the question itself to the definition part of an xAPIEvent
+   */
+  StandardPage.prototype.addQuestionToXAPI = function (xAPIEvent) {
+    var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
+    $.extend(definition, this.getxAPIDefinition());
+  };
+
+  /**
+   * Get xAPI data.
+   * Contract used by report rendering engine.
+   *
+   * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
+   */
+  StandardPage.prototype.getXAPIData = function () {
+    var xAPIEvent = this.createXAPIEventTemplate('compound');
+    this.addQuestionToXAPI(xAPIEvent);
+    return {
+      statement: xAPIEvent.data.statement,
+      children: this.getXAPIDataFromChildren()
+    };
+  };
+
   return StandardPage;
 }(H5P.jQuery, H5P.EventDispatcher));
