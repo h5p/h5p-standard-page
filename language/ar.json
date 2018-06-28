@@ -1,26 +1,26 @@
 {
   "semantics": [
     {
-      "label": "Title",
+      "label": "العنوان",
       "default": "Standard Page",
-      "description": "Title for the page."
+      "description": "عنوان الصفحة."
     },
     {
-      "label": "Elements",
+      "label": "عناصر",
       "entity": "element",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "نوع العنصر",
+        "description": "مكتبة من اجل هذه الصفحة."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
+      "label": "تسمية النص المساعد",
+      "description": "تسمية  من اجل عرض معلومات مفيدة إضافية للمستخدم.",
       "default": "More information"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "ملء معلومات مساعدة اضافية",
+      "description": "هنا يمكنك ملء معلومات إضافية للمستخدم ، والتي ستكون متاحة عند النقر عليها."
     }
   ]
 }
