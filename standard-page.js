@@ -187,7 +187,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     };
     definition.extensions = {
       'https://h5p.org/x-api/h5p-machine-name': 'H5P.StandardPage'
-    }
+    };
 
     return definition;
   };

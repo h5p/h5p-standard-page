@@ -1,26 +1,26 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Title",
-      "default":"Standard Page",
-      "description":"Title for the page."
+      "label": "Titre",
+      "default": "Page standard",
+      "description": "Titre de la page."
     },
     {
-      "label":"Elements",
-      "entity":"element",
-      "field":{
-        "label":"Element type",
-        "description":"Library for this page."
+      "label": "Eléments",
+      "entity": "Elément",
+      "field": {
+        "label": "Type d'élément",
+        "description": "Librairie de cet élément."
       }
     },
     {
-      "label":"Label for help text",
-      "description":"Label for showing additional helpful information to the user.",
-      "default":"More information"
+      "label": "Intitulé du texte d'aide",
+      "description": "Intitulé pour afficher des informations complémentaires utiles à l'utilisateur.",
+      "default": "En savoir plus"
     },
     {
-      "label":"Fill in additional help information",
-      "description":"Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Renseigner les informations complémentaires utiles à l'utilisateur",
+      "description": "Vous pouvez renseigner ici les information complémentaire utiles à l'utilisateur, qui seront affichées au clic."
     }
   ]
 }
