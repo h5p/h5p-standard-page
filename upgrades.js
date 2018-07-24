@@ -4,7 +4,7 @@ var H5PUpgrades = H5PUpgrades || {};
 H5PUpgrades['H5P.StandardPage'] = (function ($) {
   return {
     1: {
-      3: function (parameters, finished, extras) {
+      4: function (parameters, finished, extras) {
         var title;
 
         if (parameters) {

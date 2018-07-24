@@ -2,7 +2,7 @@
   "title": "Standard page",
   "description": "Standard list page where you can add multiple library element .",
   "majorVersion": 1,
-  "minorVersion": 3,
+  "minorVersion": 4,
   "patchVersion": 0,
   "runnable": 0,
   "author": "Joubel",
@@ -31,12 +31,12 @@
     {
       "machineName": "H5P.Image",
       "majorVersion": 1,
-      "minorVersion": 0
+      "minorVersion": 1
     },
     {
       "machineName": "H5P.Text",
       "majorVersion": 1,
-      "minorVersion": 1
+      "minorVersion": 2
     },
     {
       "machineName": "H5P.TextInputField",
