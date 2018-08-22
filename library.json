@@ -10,7 +10,7 @@
   "machineName": "H5P.StandardPage",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 15
+    "minorVersion": 19
   },
   "preloadedCss": [
     {

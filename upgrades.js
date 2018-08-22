@@ -1,7 +1,7 @@
 /** @namespace H5PUpgrades */
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.StandardPage'] = (function ($) {
+H5PUpgrades['H5P.StandardPage'] = (function () {
   return {
     1: {
       4: function (parameters, finished, extras) {
@@ -19,4 +19,4 @@ H5PUpgrades['H5P.StandardPage'] = (function ($) {
       }
     }
   };
-})(H5P.jQuery);
+})();
