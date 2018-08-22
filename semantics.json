@@ -22,15 +22,15 @@
       "options": [
         {
           "name": "H5P.Text 1.2",
-          "hasmetadata": false
+          "hasMetadata": false
         },
         {
           "name": "H5P.TextInputField 1.1",
-          "hasmetadata": false
+          "hasMetadata": false
         },
         {
           "name": "H5P.Image 1.1",
-          "hasmetadata": true
+          "hasMetadata": true
         }
       ]
     }
