@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "標題文字",
-      "default": "一般頁面",
-      "description": "一般頁面上顯示的標題。"
-    },
-    {
       "label": "所有元件",
       "entity": "元件",
       "field": {

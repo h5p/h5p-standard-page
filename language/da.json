@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "Titel",
-      "default": "Standard Side",
-      "description": "Denne sides titel."
-    },
-    {
       "label": "Elementer",
       "entity": "element",
       "field": {

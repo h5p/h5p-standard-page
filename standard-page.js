@@ -24,8 +24,8 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     this.extras = extras;
 
     // Set default behavior.
-    this.params = $.extend({}, {
-      title: 'Title',
+    this.params = $.extend({
+      title: this.getTitle(),
       elementList: [],
       helpTextLabel: 'Read more',
       helpText: 'Help text'
@@ -143,7 +143,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * @returns {String} page title
    */
   StandardPage.prototype.getTitle = function () {
-    return H5P.createTitle((this.extras && this.extras.metadata && this.extras.metadata.title) ? this.extras.metadata.title : 'Standard Page');
+    return H5P.createTitle((this.extras && this.extras.metadata && this.extras.metadata.title) ? this.extras.metadata.title : 'Instructions');
   };
 
   /**

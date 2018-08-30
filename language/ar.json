@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "العنوان",
-      "default": "Standard Page",
-      "description": "عنوان الصفحة."
-    },
-    {
       "label": "عناصر",
       "entity": "element",
       "field": {
