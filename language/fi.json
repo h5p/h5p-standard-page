@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "Otsikko",
-      "default": "Perussivu",
-      "description": "Sivun otsikko."
-    },
-    {
       "label": "Rakenne",
       "entity": "osa",
       "field": {

@@ -1,13 +1,5 @@
 [
   {
-    "name": "title",
-    "label": "Title",
-    "importance": "high",
-    "type": "text",
-    "default": "Standard Page",
-    "description": "Title for the page."
-  },
-  {
     "name": "elementList",
     "label": "Elements",
     "importance": "high",
@@ -20,9 +12,18 @@
       "importance": "high",
       "description": "Library for this page.",
       "options": [
-        "H5P.Text 1.1",
-        "H5P.TextInputField 1.1",
-        "H5P.Image 1.0"
+        {
+          "name": "H5P.Text 1.1",
+          "hasMetadata": false
+        },
+        {
+          "name": "H5P.TextInputField 1.1",
+          "hasMetadata": false
+        },
+        {
+          "name": "H5P.Image 1.1",
+          "hasMetadata": true
+        }
       ]
     }
   },
