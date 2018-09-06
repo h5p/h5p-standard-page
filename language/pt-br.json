@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "Título",
-      "default": "Página padrão",
-      "description": "Título para a página."
-    },
-    {
       "label": "Elementos",
       "entity": "element",
       "field": {
