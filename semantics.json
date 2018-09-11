@@ -13,16 +13,13 @@
       "description": "Library for this page.",
       "options": [
         {
-          "name": "H5P.Text 1.1",
-          "hasMetadata": false
+          "name": "H5P.Text 1.1"
         },
         {
-          "name": "H5P.TextInputField 1.1",
-          "hasMetadata": false
+          "name": "H5P.TextInputField 1.1"
         },
         {
-          "name": "H5P.Image 1.1",
-          "hasMetadata": true
+          "name": "H5P.Image 1.1"
         }
       ]
     }
