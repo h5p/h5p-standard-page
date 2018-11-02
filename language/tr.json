@@ -1,21 +1,21 @@
 {
   "semantics": [
     {
-      "label": "Elements",
-      "entity": "element",
+      "label": "Öğeler",
+      "entity": "öğe",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "Öğe türü",
+        "description": "Bu sayfa için kütüphane."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
-      "default": "More information"
+      "label": "Yardım metni için etiket",
+      "description": "Kullanıcıya yardımcı ek bilgi göstermek için etiket.",
+      "default": "Daha fazla bilgi"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Ek yardım bilgisini doldurun",
+      "description": "Tıklandığında erişilebilir olacak, kullanıcı için ek bilgiyi burada doldurabilrsiniz."
     }
   ]
 }
