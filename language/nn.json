@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "Tittel",
-      "default": "Standard side",
-      "description": "Tittel for sida."
-    },
-    {
       "label": "Elementer",
       "entity": "Element",
       "field": {

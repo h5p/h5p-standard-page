@@ -1,11 +1,6 @@
 {
   "semantics": [
     {
-      "label": "Titel",
-      "default": "Standaard pagina",
-      "description": "Titel van de pagina."
-    },
-    {
       "label": "Onderdelen",
       "entity": "onderdeel",
       "field": {
