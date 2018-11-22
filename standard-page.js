@@ -137,7 +137,9 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   StandardPage.prototype.markRequiredInputFields = function () {
     this.pageInstances.forEach(function (elementInstance) {
       if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
-        elementInstance.markEmptyField();
+        if (!elementInstance.isRequiredInputFilled()) {
+          elementInstance.markEmptyField();
+        }
       }
     });
   };
