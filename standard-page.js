@@ -132,6 +132,19 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   };
 
   /**
+   * Mark required input fields.
+   */
+  StandardPage.prototype.markRequiredInputFields = function () {
+    this.pageInstances.forEach(function (elementInstance) {
+      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
+        if (!elementInstance.isRequiredInputFilled()) {
+          elementInstance.markEmptyField();
+        }
+      }
+    });
+  };
+
+  /**
    * Sets focus on page
    */
   StandardPage.prototype.focus = function () {
