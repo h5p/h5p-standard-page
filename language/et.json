@@ -1,21 +1,21 @@
 {
   "semantics": [
     {
-      "label": "Elements",
+      "label": "Elemendid",
       "entity": "element",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "Elemendi tüüp",
+        "description": "Selle lehe teek."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
-      "default": "More information"
+      "label": "Abiteksti silt",
+      "description": "Kasutajale täiendava abiteabe näitamise silt.",
+      "default": "Rohkem teavet"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Sisesta täiendav abiteave",
+      "description": "Siia saad sisestada kasutaja jaoks täiendava abiteabe, mis avaneb vajutuse peale."
     }
   ]
 }
