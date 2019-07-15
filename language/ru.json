@@ -1,21 +1,21 @@
 {
   "semantics": [
     {
-      "label": "Elements",
-      "entity": "element",
+      "label": "Элементы",
+      "entity": "элемент",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "Тип элемента",
+        "description": "Библиотека для этой страницы."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
-      "default": "More information"
+      "label": "Надпись для справочного текста",
+      "description": "Надпись для отображения дополнительной полезной информации пользователю.",
+      "default": "Дополнительная информация"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Заполните дополнительную справочную информацию",
+      "description": "Здесь вы можете заполнить дополнительную информацию для пользователя, которая будет доступна при нажатии."
     }
   ]
 }

@@ -2,14 +2,14 @@
   "semantics": [
     {
       "label": "Elemente",
-      "entity": "element",
+      "entity": "Element",
       "field": {
         "label": "Elementtyp",
         "description": "Bibliothek für diese Seite"
       }
     },
     {
-      "label": "Beschriftung für den Hilfstext",
+      "label": "Beschriftung des Hilfetexts",
       "description": "Beschriftung, um dem Nutzer nützliche Informationen anzuzeigen",
       "default": "Mehr Informationen"
     },
