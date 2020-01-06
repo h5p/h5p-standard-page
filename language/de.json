@@ -2,7 +2,7 @@
   "semantics": [
     {
       "label": "Elemente",
-      "entity": "Element",
+      "entity": "Frage",
       "field": {
         "label": "Elementtyp",
         "description": "Bibliothek für diese Seite"
