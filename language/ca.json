@@ -4,18 +4,18 @@
       "label": "Elements",
       "entity": "element",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "Tipus d’element",
+        "description": "Biblioteca per a aquesta pàgina."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
-      "default": "More information"
+      "label": "Etiqueta per al text d’ajuda",
+      "description": "Etiqueta per mostra la informació addicional útil per l’usuari.",
+      "default": "Més informació"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Omple la informació addicional d’ajuda",
+      "description": "Aquí podeu introduir informació addicional per a l’usuari, que estarà disponible en fer clic."
     }
   ]
 }
