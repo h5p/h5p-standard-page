@@ -14,8 +14,8 @@
       "default": "Más información"
     },
     {
-      "label": "Acomplete con información útil adicional",
-      "description": "Aquí puede Usted acompletar información útil adicional para el usuario, que estará disponible cuando se elija."
+      "label": "Escriba información útil adicional",
+      "description": "Aquí puede Usted escribir información útil adicional para el usuario, que estará disponible cuando se elija."
     }
   ]
 }
