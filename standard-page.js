@@ -221,7 +221,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
    */
   StandardPage.prototype.getXAPIData = function () {
-    var xAPIEvent = this.createXAPIEventTemplate('compound');
+    var xAPIEvent = this.createXAPIEventTemplate('answered');
     this.addQuestionToXAPI(xAPIEvent);
     return {
       statement: xAPIEvent.data.statement,
