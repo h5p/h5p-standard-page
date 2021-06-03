@@ -30,6 +30,24 @@ H5P.StandardPage = (function ($, EventDispatcher) {
       helpTextLabel: 'Read more',
       helpText: 'Help text'
     }, params);
+
+    /**
+     * Implements resume (save content state)
+     *
+     * @method getCurrentState
+     * @public
+     * @returns [array] array containing input fields state
+     */
+    this.getCurrentState = function () {
+      var inputs = this.getInputArray(this.pageInstances),
+          state = [];
+
+      inputs.forEach(function (input, index) {
+        state[index] = input.value || '';
+      });
+
+      return state;
+    };
   }
 
   // Setting up inheritance
@@ -140,6 +158,24 @@ H5P.StandardPage = (function ($, EventDispatcher) {
         if (!elementInstance.isRequiredInputFilled()) {
           elementInstance.markEmptyField();
         }
+      }
+    });
+  };
+
+  /**
+   * Sets previous state values for input fields
+   * @param state
+   */
+  StandardPage.prototype.setPreviousState = function (state) {
+    var inputIndex = 0;
+
+    this.pageInstances.forEach(function (instance) {
+      if (instance.libraryInfo.machineName === 'H5P.TextInputField' && instance.$inputField !== undefined) {
+        if (state && state[inputIndex] && !instance.$inputField.val()) {
+          instance.$inputField.val(state[inputIndex]);
+        }
+
+        inputIndex++;
       }
     });
   };
