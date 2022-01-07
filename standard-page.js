@@ -14,6 +14,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * Initialize module.
    * @param {Object} params Behavior settings
    * @param {Number} id Content identification
+   * @param {object} [extras] Saved state, metadata, etc.
    * @returns {Object} StandardPage StandardPage instance
    */
   function StandardPage(params, id, extras) {
@@ -30,6 +31,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
       helpTextLabel: 'Read more',
       helpText: 'Help text'
     }, params);
+
+    if (extras !== undefined && typeof extras.previousState === 'object' && Object.keys(extras.previousState).length) {
+      this.previousState = extras.previousState;
+    }
   }
 
   // Setting up inheritance
@@ -64,12 +69,23 @@ H5P.StandardPage = (function ($, EventDispatcher) {
 
     this.pageInstances = [];
 
-    this.params.elementList.forEach(function (element) {
+    this.params.elementList.forEach(function (element, index) {
       var $elementContainer = $('<div>', {
         'class': 'h5p-standard-page-element'
       }).appendTo(self.$inner);
 
-      var elementInstance = H5P.newRunnable(element, self.id);
+      const childExtras = {}
+      if (self.previousState && self.previousState.childrenStates[index]) {
+        childExtras.previousState = self.previousState.childrenStates[index];
+      }
+
+      var elementInstance = H5P.newRunnable(
+        element,
+        self.id,
+        undefined,
+        true,
+        childExtras
+      );
 
       elementInstance.on('loaded', function () {
         self.trigger('resize');
@@ -226,6 +242,23 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     return {
       statement: xAPIEvent.data.statement,
       children: this.getXAPIDataFromChildren()
+    };
+  };
+
+  /**
+   * Answer call to return the current state.
+   *
+   * @return {object} Current state.
+   */
+  StandardPage.prototype.getCurrentState = function () {
+    const childrenStates = this.pageInstances.map(function (instance) {
+      return (typeof instance.getCurrentState === 'function') ?
+        instance.getCurrentState() :
+        undefined;
+    });
+
+    return {
+      childrenStates: childrenStates
     };
   };
 
