@@ -5,12 +5,12 @@
       "entity": "Frage",
       "field": {
         "label": "Elementtyp",
-        "description": "Bibliothek für diese Seite"
+        "description": "Hier kann ein Inhaltstyp für diese Seite gewählt werden."
       }
     },
     {
       "label": "Beschriftung des Hilfetexts",
-      "description": "Beschriftung, um dem Nutzer nützliche Informationen anzuzeigen",
+      "description": "Hinweistext zum Anzeigen zusätzlicher hilfreicher Informationen für den Benutzer.",
       "default": "Mehr Informationen"
     },
     {
