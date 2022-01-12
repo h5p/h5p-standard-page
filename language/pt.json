@@ -1,21 +1,21 @@
 {
   "semantics": [
     {
-      "label": "Elements",
-      "entity": "element",
+      "label": "Elementos",
+      "entity": "elemento",
       "field": {
-        "label": "Element type",
-        "description": "Library for this page."
+        "label": "Tipo de elemento",
+        "description": "Biblioteca para esta página."
       }
     },
     {
-      "label": "Label for help text",
-      "description": "Label for showing additional helpful information to the user.",
-      "default": "More information"
+      "label": "Rótulo para texto de ajuda",
+      "description": "Rótulo para mostrar informações úteis adicionais ao utilizador.",
+      "default": "Mais informação"
     },
     {
-      "label": "Fill in additional help information",
-      "description": "Here you can fill in additional information for the user, which will be available when clicked."
+      "label": "Insira a informação de ajuda adicional",
+      "description": "Aqui pode inserir informações adicionais para o utilizador. Ficarão disponíveis quando clicar."
     }
   ]
 }
