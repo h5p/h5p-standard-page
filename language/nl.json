@@ -9,8 +9,8 @@
       }
     },
     {
-      "label": "Label voor de help tekst",
-      "description": "Label om de aanvullende nuttige informatie aan de gebruiker te tonen.",
+      "label": "Label voor helptekst",
+      "description": "Label om aanvullende nuttige informatie aan de gebruiker te tonen.",
       "default": "Meer informatie"
     },
     {
