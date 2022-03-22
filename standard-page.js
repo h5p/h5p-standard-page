@@ -32,7 +32,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
       helpText: 'Help text'
     }, params);
 
-    if (extras !== undefined && typeof extras.previousState === 'object' && Object.keys(extras.previousState).length) {
+    if (extras !== undefined && extras.previousState !== null && typeof extras.previousState === 'object' && Object.keys(extras.previousState).length) {
       this.previousState = extras.previousState;
     }
   }
