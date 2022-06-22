@@ -27,6 +27,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     // Set default behavior.
     this.params = $.extend({
       title: this.getTitle(),
+      a11yFriendlyTitle: this.getTitle(false),
       elementList: [],
       helpTextLabel: 'Read more',
       helpText: 'Help text'
@@ -54,7 +55,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     }).appendTo($container);
 
     var standardPageTemplate =
-      '<div class="page-header" role="heading" tabindex="-1">' +
+      '<div class="page-header" role="heading" tabindex="-1" aria-label="{{{a11yFriendlyTitle}}}">' +
       ' <div class="page-title">{{{title}}}</div>' +
       ' <button class="page-help-text">{{{helpTextLabel}}}</button>' +
       '</div>';
@@ -169,10 +170,12 @@ H5P.StandardPage = (function ($, EventDispatcher) {
 
   /**
    * Get page title
+   * @param {boolean} turncatedTitle turncate title flag
    * @returns {String} page title
    */
-  StandardPage.prototype.getTitle = function () {
-    return H5P.createTitle((this.extras && this.extras.metadata && this.extras.metadata.title) ? this.extras.metadata.title : 'Instructions');
+  StandardPage.prototype.getTitle = function (turncatedTitle = true) {
+    const pageTitle = (this.extras && this.extras.metadata && this.extras.metadata.title) ? this.extras.metadata.title : 'Instructions';
+    return turncatedTitle ? H5P.createTitle(pageTitle) : pageTitle;
   };
 
   /**
