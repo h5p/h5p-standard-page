@@ -268,7 +268,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    * Resize function for responsiveness.
    */
   StandardPage.prototype.resize = function () {
-    this.$inner.css('height', this.$inner.get(0).getBoundingClientRect().height);
+    this.$inner.css('height', this.parent.$mainContent.get(0).getBoundingClientRect().height);
   };
 
   return StandardPage;
