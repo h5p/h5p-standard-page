@@ -165,6 +165,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    */
   StandardPage.prototype.focus = function () {
     this.$pageTitle.focus();
+    this.resize();
   };
 
   /**
@@ -260,6 +261,14 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     return {
       childrenStates: childrenStates
     };
+  };
+
+
+  /**
+   * Resize function for responsiveness.
+   */
+  StandardPage.prototype.resize = function () {
+    this.$inner.css('height', this.$inner.get(0).getBoundingClientRect().height);
   };
 
   return StandardPage;
