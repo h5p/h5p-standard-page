@@ -91,6 +91,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
         self.trigger('resize');
       });
 
+      elementInstance.on('resize', function () {
+        self.parent.trigger('resize');
+      });
+
       elementInstance.attach($elementContainer);
 
       self.pageInstances.push(elementInstance);
@@ -165,7 +169,6 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    */
   StandardPage.prototype.focus = function () {
     this.$pageTitle.focus();
-    this.resize();
   };
 
   /**
@@ -261,14 +264,6 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     return {
       childrenStates: childrenStates
     };
-  };
-
-
-  /**
-   * Resize function for responsiveness.
-   */
-  StandardPage.prototype.resize = function () {
-    this.$inner.css('height', this.parent.$mainContent.get(0).getBoundingClientRect().height);
   };
 
   return StandardPage;

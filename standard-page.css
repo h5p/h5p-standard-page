@@ -1,7 +1,5 @@
 .h5p-standard-page {
   padding: 0.5em 1em;
-  position: relative;
-  overflow-y: auto;
 }
 
 .h5p-standard-page .h5p-standard-page-element {
