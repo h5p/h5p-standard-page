@@ -54,19 +54,31 @@ H5P.StandardPage = (function ($, EventDispatcher) {
       'class': MAIN_CONTAINER
     }).appendTo($container);
 
-    var standardPageTemplate =
-      '<div class="page-header" role="heading" tabindex="-1" aria-label="{{{a11yFriendlyTitle}}}">' +
-      ' <div class="page-title">{{{title}}}</div>' +
-      ' <button class="page-help-text">{{{helpTextLabel}}}</button>' +
-      '</div>';
+    self.$pageTitle = $('<div>', {
+      'class': 'page-header',
+      role: 'heading',
+      tabindex: -1,
+      'aria-label': self.params.a11yFriendlyTitle,
+      append: $('<div>', {
+        class: 'page-title',
+        html: self.params.title
+      }),
+      appendTo: self.$inner
+    });
 
-    /*global Mustache */
-    self.$inner.append(Mustache.render(standardPageTemplate, self.params));
-
-    self.$pageTitle = self.$inner.find('.page-header');
-    self.$helpButton = self.$inner.find('.page-help-text');
-
-    self.createHelpTextButton();
+    if (self.params.helpText !== undefined && self.params.helpText.length !== 0) {
+      self.$helpButton = $('<button>', {
+        'class': 'page-help-text',
+        html: self.params.helpTextLabel,
+        click: function () {
+          self.trigger('open-help-dialog', {
+            title: self.params.title,
+            helpText: self.params.helpText
+          });
+        },
+        appendTo: self.$pageTitle
+      });
+    }
 
     this.pageInstances = [];
 
@@ -100,25 +112,6 @@ H5P.StandardPage = (function ($, EventDispatcher) {
 
       self.pageInstances.push(elementInstance);
     });
-  };
-
-  /**
-   * Create help text functionality for reading more about the task
-   */
-  StandardPage.prototype.createHelpTextButton = function () {
-    var self = this;
-
-    if (this.params.helpText !== undefined && this.params.helpText.length) {
-      self.$helpButton.on('click', function () {
-        self.trigger('open-help-dialog', {
-          title: self.params.title,
-          helpText: self.params.helpText
-        });
-      });
-    }
-    else {
-      self.$helpButton.remove();
-    }
   };
 
   /**
