@@ -22,6 +22,12 @@
 	padding: 0.5em 0em 0em 1.25em;
 }
 
+.h5p-standar-page .h5p-accordion .h5p-panel-button {
+	padding: 0.2em 0.2em 0.2em 0;
+	font-size: 16px;
+	font-weight: normal;
+}
+
 .h5p-standard-page .h5p-accordion .h5p-panel-button:before {
 	left: 0.25em;
 	font-size: 14px;
