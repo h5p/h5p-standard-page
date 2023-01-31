@@ -11,7 +11,7 @@
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-title {
-  padding: 0.8em 0 0.8em 1.25em;
+	padding: 0.2em 0 0.2em 1em;
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-title::before {
@@ -19,5 +19,10 @@
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-content {
-  padding: 0;
+	padding: 0.5em 0em 0em 1.25em;
+}
+
+.h5p-standard-page .h5p-accordion .h5p-panel-button:before {
+	left: 0.25em;
+	font-size: 14px;
 }
