@@ -262,5 +262,11 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     };
   };
 
+  StandardPage.prototype.resetTask = function() {
+    this.pageInstances.map(function (instance) {
+      typeof instance.resetTask === 'function' && instance.resetTask();
+    });
+  };
+
   return StandardPage;
 }(H5P.jQuery, H5P.EventDispatcher));
