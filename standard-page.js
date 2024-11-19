@@ -8,7 +8,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   "use strict";
 
   // CSS Classes:
-  var MAIN_CONTAINER = 'h5p-standard-page';
+  var MAIN_CONTAINER = 'h5p-standard-page h5p-theme';
 
   /**
    * Initialize module.
