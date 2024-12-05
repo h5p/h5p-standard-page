@@ -1,5 +1,5 @@
 .h5p-standard-page {
-  padding: 0.5em 1em;
+ 
 }
 
 .h5p-standard-page .h5p-standard-page-element {
@@ -7,7 +7,10 @@
 }
 
 .h5p-standard-page .h5p-standard-page-element:nth-of-type(2) {
-  padding-top: 1em;
+  padding-top: var(--h5p-theme-spacing-s);
+}
+.h5p-documentation-tool-page-container .h5p-documentation-tool-page.current p{
+  margin: var(--h5p-theme-spacing-xxs) 0;
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-title {
