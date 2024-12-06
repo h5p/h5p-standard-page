@@ -3,7 +3,7 @@
 }
 
 .h5p-standard-page .h5p-standard-page-element {
-  padding: 0.25em 0;
+  padding: var(--h5p-theme-spacing-xs) 0;
 }
 
 .h5p-standard-page .h5p-standard-page-element:nth-of-type(2) {
@@ -13,13 +13,6 @@
   margin: var(--h5p-theme-spacing-xxs) 0;
 }
 
-.h5p-standard-page .h5p-accordion .h5p-panel-title {
-  padding: 0.2em 0 0.2em 1em;
-}
-
-.h5p-standard-page .h5p-accordion .h5p-panel-title::before {
-  left: 0;
-}
 
 .h5p-standard-page .h5p-accordion .h5p-panel-content {
   padding: 0.5em 0em 0em 1.25em;
@@ -28,7 +21,6 @@
 .h5p-standard-page .h5p-accordion .h5p-panel-button {
   padding: 0.2em 0.2em 0.2em 0;
   font-size: 16px;
-  font-weight: normal;
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-button:before {
