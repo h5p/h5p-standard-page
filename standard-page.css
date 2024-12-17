@@ -15,15 +15,15 @@
 
 
 .h5p-standard-page .h5p-accordion .h5p-panel-content {
-  padding: 0.5em 0em 0em 1.25em;
+  padding: var(--h5p-theme-spacing-xxs) 0em 0em calc(var(--h5p-theme-spacing-s)*1.25);
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-button {
-  padding: 0.2em 0.2em 0.2em 0;
-  font-size: 16px;
+  padding: calc(var(--h5p-theme-spacing-s)*0.2) calc(var(--h5p-theme-spacing-s)*0.2) calc(var(--h5p-theme-spacing-s)*0.2) 0;
+  font-size: var(--h5p-theme-font-size-m);
 }
 
 .h5p-standard-page .h5p-accordion .h5p-panel-button:before {
-  left: 0.25em;
-  font-size: 14px;
+  left: calc(var(--h5p-theme-spacing-s)/2);
+   font-size: var(--h5p-theme-font-size-s);
 }
