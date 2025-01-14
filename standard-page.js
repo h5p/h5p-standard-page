@@ -100,6 +100,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
         childExtras
       );
 
+      if (!elementInstance) {
+        return;
+      }
+
       elementInstance.on('loaded', function () {
         self.trigger('resize');
       });
