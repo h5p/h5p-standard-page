@@ -92,6 +92,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
         childExtras.previousState = self.previousState.childrenStates[index];
       }
 
+      if (element.library === undefined) {
+        return;
+      }
+
       var elementInstance = H5P.newRunnable(
         element,
         self.id,
