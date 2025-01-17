@@ -20,8 +20,14 @@
 
 .h5p-standard-page .h5p-accordion .h5p-panel-button {
   padding: calc(var(--h5p-theme-spacing-s)*0.2) calc(var(--h5p-theme-spacing-s)*0.2) calc(var(--h5p-theme-spacing-s)*0.2) 0;
+  margin: calc(var(--h5p-theme-spacing-s)*0.2) 0;
   font-size: var(--h5p-theme-font-size-m);
 }
+.h5p-standard-page .h5p-accordion .h5p-panel-title:focus {
+    outline: 2px ridge var(--h5p-theme-main-cta-base);
+    outline-offset: 2px;
+}
+
 
 .h5p-standard-page .h5p-accordion .h5p-panel-button:before {
   left: calc(var(--h5p-theme-spacing-s)/2);
