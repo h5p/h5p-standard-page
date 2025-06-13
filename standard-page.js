@@ -8,7 +8,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   "use strict";
 
   // CSS Classes:
-  var MAIN_CONTAINER = 'h5p-standard-page';
+  var MAIN_CONTAINER = 'h5p-standard-page h5p-theme';
 
   /**
    * Initialize module.
@@ -69,7 +69,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
     if (self.params.helpText !== undefined && self.params.helpText.length !== 0) {
       self.$helpButton = $('<button>', {
         'class': 'page-help-text',
-        html: self.params.helpTextLabel,
+        'aria-label': self.params.helpTextLabel,
         click: function () {
           self.trigger('open-help-dialog', {
             title: self.params.title,
@@ -78,6 +78,7 @@ H5P.StandardPage = (function ($, EventDispatcher) {
         },
         appendTo: self.$pageTitle
       });
+      H5P.Tooltip(self.$helpButton[0]);
     }
 
     this.pageInstances = [];
