@@ -1,0 +1,21 @@
+{
+  "semantics": [
+    {
+      "label": "Elemen",
+      "entity": "elemen",
+      "field": {
+        "label": "Jenis elemen",
+        "description": "Pustaka untuk halaman ini."
+      }
+    },
+    {
+      "label": "Label untuk teks bantuan",
+      "description": "Label untuk menampilkan informasi tambahan yang membantu kepada pengguna.",
+      "default": "Informasi lebih lanjut"
+    },
+    {
+      "label": "Isi informasi bantuan tambahan",
+      "description": "Di sini Anda dapat mengisi informasi tambahan untuk pengguna, yang akan tersedia ketika diklik."
+    }
+  ]
+}
