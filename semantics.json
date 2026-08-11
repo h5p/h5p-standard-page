@@ -11,7 +11,6 @@
       "label": "Element type",
       "importance": "high",
       "description": "Library for this page.",
-      "showDescriptionAsTooltip": false,
       "options": [
         "H5P.Text 1.1",
         "H5P.TextInputField 1.2",
