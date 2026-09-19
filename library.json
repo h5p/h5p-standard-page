@@ -37,6 +37,16 @@
       "machineName": "H5P.TextInputField",
       "majorVersion": 1,
       "minorVersion": 2
+    },
+    {
+      "machineName": "H5P.CheckboxList",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.DropdownField",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

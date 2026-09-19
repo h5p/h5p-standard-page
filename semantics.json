@@ -14,6 +14,8 @@
       "options": [
         "H5P.Text 1.1",
         "H5P.TextInputField 1.2",
+        "H5P.CheckboxList 1.0",
+        "H5P.DropdownField 1.0",
         "H5P.Image 1.1",
         "H5P.Accordion 1.0"
       ]

@@ -125,7 +125,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   StandardPage.prototype.getInputArray = function () {
     var inputArray = [];
     this.pageInstances.forEach(function (elementInstance) {
-      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
+      if (
+        ['H5P.TextInputField', 'H5P.CheckboxList', 'H5P.DropdownField']
+          .includes(elementInstance.libraryInfo.machineName)
+      ) {
         inputArray.push(elementInstance.getInput());
       }
     });
@@ -140,7 +143,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
   StandardPage.prototype.requiredInputsIsFilled = function () {
     var requiredInputsIsFilled = true;
     this.pageInstances.forEach(function (elementInstance) {
-      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
+      if (
+        ['H5P.TextInputField', 'H5P.CheckboxList', 'H5P.DropdownField']
+          .includes(elementInstance.libraryInfo.machineName)
+      ) {
         if (!elementInstance.isRequiredInputFilled()) {
           requiredInputsIsFilled = false;
         }
@@ -155,7 +161,10 @@ H5P.StandardPage = (function ($, EventDispatcher) {
    */
   StandardPage.prototype.markRequiredInputFields = function () {
     this.pageInstances.forEach(function (elementInstance) {
-      if (elementInstance.libraryInfo.machineName === 'H5P.TextInputField') {
+      if (
+        ['H5P.TextInputField', 'H5P.CheckboxList', 'H5P.DropdownField']
+          .includes(elementInstance.libraryInfo.machineName)
+      ) {
         if (!elementInstance.isRequiredInputFilled()) {
           elementInstance.markEmptyField();
         }
